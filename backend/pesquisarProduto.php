@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 include "conexao.php"; 
@@ -24,4 +25,32 @@ try {
     header('Content-Type: application/json', true, 500);
     echo json_encode(["erro" => $e->getMessage()]);
 }
+=======
+<?php
+
+include "conexao.php"; 
+
+$nome = $_REQUEST["nome"] ?? "";
+
+try {
+    $consulta_produtos = $conexao->prepare("SELECT * FROM remedios WHERE nome LIKE :nome");
+
+    $termo = "%".$nome."%";
+    $consulta_produtos->bindParam(':nome', $termo);
+    $consulta_produtos->execute();
+
+    $produtos = array();
+
+    while ($produto = $consulta_produtos->fetch(PDO::FETCH_ASSOC)) {
+        $produtos[] = $produto; 
+    }
+
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode($produtos, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+
+} catch (PDOException $e) {
+    header('Content-Type: application/json', true, 500);
+    echo json_encode(["erro" => $e->getMessage()]);
+}
+>>>>>>> fa91bf1da99800632aa31ddfe1feb61f47e53817
 ?>

@@ -14,7 +14,11 @@
 > Como o projeto roda em ambiente local, siga os passos abaixo:
 ### #1 - Clonar o Repositório
 ```bash
+<<<<<<< HEAD
 git clone git@github.com:Johnnyy30/Estoque-De-Remedios.git
+=======
+git clone git@github.com:joao-Devr/Estoque-De-Remedios.git
+>>>>>>> fa91bf1da99800632aa31ddfe1feb61f47e53817
 cd Estoque-De-Remedios
 ```
 ### #2 - Baixe o ambiente de desenvolvimento local (XAMPP)
