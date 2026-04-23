@@ -3,7 +3,7 @@
 $database = "Estoque_de_Remedios";
 $servername = "127.0.0.1"; 
 $username = "root";
-$password = "Joaopc35.";
+$password = "";
 $port = "3312";
 try {
     // Cria conexão PDO
