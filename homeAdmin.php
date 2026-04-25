@@ -13,6 +13,7 @@ include "backend/verify.php";
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400&display=swap">
 <script src="router.js"></script>
 <style>
   .main-content {
@@ -33,6 +34,7 @@ include "backend/verify.php";
                 <a href="backend/logout.php">Sair</a>
             </div>
     </aside>
+
     <div id="main" class="main-content">
     
     </div>

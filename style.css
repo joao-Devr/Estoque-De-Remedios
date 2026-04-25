@@ -173,7 +173,7 @@ tfoot input {
 }
 
 .btn-add {
-    background-color: #000000; /* Azul */
+    background-color: #000000; 
     width: 100%;
 }
 .btn-add:hover {
@@ -191,7 +191,7 @@ tfoot input {
 /* ---- Sidebar (Barra Lateral) ---- */
 .sidebar {
     width: 260px;
-    background-color: #2c3e50; /* Azul escuro */
+    background-color: #0F6E56;
     color: #ecf0f1;
     display: flex;
     flex-direction: column;
@@ -246,18 +246,18 @@ tfoot input {
 }
 
 .sidebar-nav a:hover {
-    background-color: #34495e;
+    background-color: #0f322a;
 }
 
 .sidebar-nav a.active {
-    background-color: #3498db;
+    background-color: #0f322a;
     font-weight: bold;
 }
 
 .sidebar-footer {
     padding: 20px;
     text-align: center;
-    border-top: 1px solid #34495e;
+    border-top: 1px solid #0F6E56;
 }
 
 .sidebar-footer a {
@@ -327,8 +327,8 @@ tfoot input {
 
 .search-form input:focus {
     outline: none;
-    border-color: #2c3e50;
-    box-shadow: 0 0 5px rgba(44, 62, 80, 0.2);
+    border-color: #0F6E56;
+    box-shadow: 0 0 5px rgba(15, 110, 86, 0.2);
 }
 
 /* ---- Tabela de Produtos ---- */
@@ -342,7 +342,7 @@ tfoot input {
 }
 
 .product-table thead {
-    background-color: #2c3e50;
+    background-color: #0F6E56;
     color: white;
 }
 
@@ -411,7 +411,7 @@ tfoot input {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     animation: fadeIn 0.3s;
 }
 
@@ -445,7 +445,7 @@ tfoot input {
 
 .modal-content h2 {
     margin-top: 0;
-    color: #2c3e50;
+    color: #0F6E56;
     border-bottom: 2px solid #f39c12;
     padding-bottom: 15px;
 }
@@ -501,7 +501,7 @@ tfoot input {
 /* ---- Botão Atualizar no Modal ---- */
 .btn-atualizar {
     padding: 12px 25px;
-    background-color: #27ae60;
+    background-color: #0F6E56;
     color: white;
     border: none;
     border-radius: 4px;
@@ -540,4 +540,32 @@ tfoot input {
 .nav-link.active {
     background-color: rgba(0, 0, 0, 0.2);
     font-weight: bold;
+}
+
+/* ---- Etilos do home ---- */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400&display=swap');
+
+.hero-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: #1A1A18;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: #0F6E56;
+}
+
+.hero-desc {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #333331;
+  line-height: 1.7;
+  max-width: 380px;
+  margin-top: 16px;
 }
