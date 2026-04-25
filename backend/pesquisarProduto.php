@@ -5,7 +5,7 @@ include "conexao.php";
 $nome = $_REQUEST["nome"] ?? "";
 
 try {
-    $consulta_produtos = $conexao->prepare("SELECT * FROM remedios WHERE nome LIKE :nome");
+    $consulta_produtos = $conexao->prepare("SELECT id, nome, data_vencimento, lote, quantidade FROM remedios WHERE nome LIKE :nome");
 
     $termo = "%".$nome."%";
     $consulta_produtos->bindParam(':nome', $termo);

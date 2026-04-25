@@ -4,7 +4,7 @@ import { CrudUI } from "./crudUI.js";
 export class ProdutoCrud extends CrudUI {
 
     buildSearchBody(term) {
-        return "termo=" + encodeURIComponent(term);
+        return "nome=" + encodeURIComponent(term);
     }
 
     buildDeleteBody(id) {
@@ -15,19 +15,13 @@ export class ProdutoCrud extends CrudUI {
     getFormData() {
         return {
             id: document.querySelector(this.s.hiddenId).value,
-            nome: document.querySelector(this.s.formFields.nome).value,
-            data: document.querySelector(this.s.formFields.data_vencimento).value,
-            lote: document.querySelector(this.s.formFields.lote).value,
-             quantidade: document.querySelector(this.s.formFields.quantidade).value
+            quantidade: document.querySelector(this.s.formFields.quantidade).value
         };
     }
 
     buildUpdateBody(d) {
         return (
             "id=" + encodeURIComponent(d.id) +
-            "&nome=" + encodeURIComponent(d.nome) +
-            "&data_vencimento=" + encodeURIComponent(d.data) +
-            "&lote=" + encodeURIComponent(d.lote) +
             "&quantidade=" + encodeURIComponent(d.quantidade)
         );
     }
@@ -37,7 +31,7 @@ export class ProdutoCrud extends CrudUI {
         const f = this.s.createFields;
         return {
             nome: document.querySelector(f.nome).value,
-            data: document.querySelector(f.data).value,
+            data_vencimento: document.querySelector(f.data_vencimento).value,
             lote: document.querySelector(f.lote).value,
             quantidade: document.querySelector(f.quantidade).value
         };
@@ -46,7 +40,7 @@ export class ProdutoCrud extends CrudUI {
     buildCreateBody(d) {
         return (
             "nome=" + encodeURIComponent(d.nome) +
-            "&data_vencimento=" + encodeURIComponent(d.data) +
+            "&data_vencimento=" + encodeURIComponent(d.data_vencimento) +
             "&lote=" + encodeURIComponent(d.lote) +
             "&quantidade=" + encodeURIComponent(d.quantidade)
         );
@@ -54,12 +48,8 @@ export class ProdutoCrud extends CrudUI {
 
     fillFormFromRow(row) {
         const tds = row.getElementsByTagName("td");
-        document.querySelector(this.s.hiddenId).value                           = tds[0].textContent;
-             document.querySelector(this.s.formFields.nome).value               = tds[1].textContent;
-             document.querySelector(this.s.formFields.data_vencimento).value    = tds[2].textContent;
-             document.querySelector(this.s.formFields.lote).value               = tds[3].textContent;
-             document.querySelector(this.s.formFields.quantidade).value         = tds[4].textContent;
-       
+        document.querySelector(this.s.hiddenId).value = tds[0].textContent;
+        document.querySelector(this.s.formFields.quantidade).value = tds[4].textContent;
     }
 
     renderRows(remedios) {
@@ -67,7 +57,7 @@ export class ProdutoCrud extends CrudUI {
             <tr id="tr${p.id}">
                 <td>${p.id}</td>
                 <td>${p.nome}</td>
-                <td>${p.data}</td>
+                <td>${p.data_vencimento}</td>
                 <td>${p.lote}</td>
                 <td>${p.quantidade}</td>
                 <td>

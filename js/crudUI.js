@@ -20,6 +20,14 @@ export class CrudUI {
 
         this.registerEvents();
     }
+    
+    openModal() {
+        document.getElementById(this.s.modalId).style.display = "block";
+    }
+
+    closeModal() {
+        document.getElementById(this.s.modalId).style.display = "none";
+    }
 
     registerEvents() {
         // Só adiciona evento se o botão de PESQUISAR existir na página
@@ -142,6 +150,10 @@ export class CrudUI {
             }
         })
         .catch(err => console.error("Erro ao cadastrar " + this.entityName + ":", err));
+    }
+
+    getRow(id) {
+        return document.getElementById(this.rowIdPrefix + id);
     }
 
     // ------------------------------
